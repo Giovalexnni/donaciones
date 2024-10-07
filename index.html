@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech4Good - Donantes y Donaciones</title>
+    <link rel="stylesheet" href="/cssDonaciones/donaciones.css">
+</head>
+<body>
+    <h1>Registro de Donantes y Donaciones - Tech4Good</h1>
+    
+    <!-- Formulario para agregar donantes -->
+    <div id="donante-form">
+        <h2>Registrar nuevo donante</h2>
+        <form id="formDonante">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" name="tipo" required>
+                <option value="Persona">Persona</option>
+                <option value="Empresa">Empresa</option>
+            </select>
+            
+            <label for="contacto">Contacto:</label>
+            <input type="email" id="contacto" name="contacto" required>
+            
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion">
+            
+            <button type="submit">Registrar Donante</button>
+        </form>
+    </div>
+    
+    <!-- Lista de donantes -->
+    <div id="donantes-list">
+        <h2>Listado de Donantes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Contacto</th>
+                    <th>Dirección</th>
+                    <th>Fecha de Registro</th>
+                </tr>
+            </thead>
+            <tbody id="donantesTableBody">
+                <!-- Aquí se insertarán las filas de los donantes -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Formulario para agregar donaciones -->
+    <div id="donacion-form">
+        <h2>Registrar nueva donación</h2>
+        <form id="formDonacion">
+            <label for="donante">Donante:</label>
+            <select id="donante" name="donante" required>
+                <!-- Aquí se llenará con los donantes registrados -->
+            </select>
+            
+            <label for="monto">Monto:</label>
+            <input type="number" id="monto" name="monto" required>
+            
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+            
+            <button type="submit">Registrar Donación</button>
+        </form>
+    </div>
+    
+    <!-- Lista de donaciones -->
+    <div id="donaciones-list">
+        <h2>Listado de Donaciones</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Donante</th>
+                    <th>Monto</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody id="donacionesTableBody">
+                <!-- Aquí se insertarán las filas de las donaciones -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="/JsDonaciones/doanciones.js"></script>
+    <script src="/JsDonaciones/servidor.js"></script>
+</body>
+</html>
